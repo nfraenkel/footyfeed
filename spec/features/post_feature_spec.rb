@@ -1,8 +1,11 @@
 require 'spec_helper'
 
 describe 'Adding a post' do
-  #fixtures :posts
+  fixtures :users
 
+  before do
+    sign_in
+  end
 
   it 'requires a title' do
     visit posts_path

@@ -1,0 +1,6 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+nate:
+  email: nfraenkel18@gmail.com
+  encrypted_password: $2a$10$PCPPIPKLcxLeiMU78Awgj.4G2aMHKeWegez29XfFMom0pciWdddZ6
+

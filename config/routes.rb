@@ -1,8 +1,12 @@
 Footyfeed::Application.routes.draw do
+  devise_for :users
+
   resources :posts
 
 
   resources :users
+
+  root :to => "posts#index"
 
 
   # The priority is based upon order of creation:
