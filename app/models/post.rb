@@ -6,6 +6,10 @@ class Post < ActiveRecord::Base
   #  user.first + " " + user.last if user
   #end
 
+  def user_name
+    user.first + " " + user.last if user
+  end
+
   def user_email
     user.email if user
   end
