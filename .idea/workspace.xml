@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="62888dd6-4539-48f6-acd7-364c52b95673" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/posts/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/posts/edit.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/index.html.erb" afterPath="$PROJECT_DIR$/app/views/users/index.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/show.html.erb" afterPath="$PROJECT_DIR$/app/views/users/show.html.erb" />
     </list>
     <ignored path="footyfeed.iws" />
@@ -25,7 +22,7 @@
     <file path="/20130501215921_create_posts.rb" changelist="62888dd6-4539-48f6-acd7-364c52b95673" time="1367625392199" ignored="false" />
     <file path="/index.html.erb" changelist="62888dd6-4539-48f6-acd7-364c52b95673" time="1367695958823" ignored="false" />
     <file path="/20130504001007_create_posts.rb" changelist="62888dd6-4539-48f6-acd7-364c52b95673" time="1367626513754" ignored="false" />
-    <file path="/show.html.erb" changelist="62888dd6-4539-48f6-acd7-364c52b95673" time="1367697291713" ignored="false" />
+    <file path="/show.html.erb" changelist="62888dd6-4539-48f6-acd7-364c52b95673" time="1367697877561" ignored="false" />
     <file path="/20130504005019_create_posts.rb" changelist="62888dd6-4539-48f6-acd7-364c52b95673" time="1367628650257" ignored="false" />
     <file path="/_form.html.erb" changelist="62888dd6-4539-48f6-acd7-364c52b95673" time="1367695357907" ignored="false" />
     <file path="$USER_HOME$/Dropbox/Public/SCHOOL/CIS196/firstapp/app/views/players/_form.html.erb" changelist="62888dd6-4539-48f6-acd7-364c52b95673" time="1367629688647" ignored="false" />
@@ -248,7 +245,7 @@
       <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/posts/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="14" selection-start="65" selection-end="65" vertical-scroll-proportion="-1.875">
+            <state line="8" column="48" selection-start="95" selection-end="95" vertical-scroll-proportion="-5.0">
               <folding />
             </state>
           </provider>
@@ -257,7 +254,7 @@
       <file leaf-file-name="show.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/users/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="0" selection-start="259" selection-end="259" vertical-scroll-proportion="0.4859611">
+            <state line="44" column="7" selection-start="996" selection-end="996" vertical-scroll-proportion="0.6112311">
               <folding />
             </state>
           </provider>
@@ -1174,14 +1171,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/posts/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="14" selection-start="65" selection-end="65" vertical-scroll-proportion="-1.875">
+        <state line="8" column="48" selection-start="95" selection-end="95" vertical-scroll-proportion="-5.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/users/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="0" selection-start="259" selection-end="259" vertical-scroll-proportion="0.4859611">
+        <state line="44" column="7" selection-start="996" selection-end="996" vertical-scroll-proportion="0.6112311">
           <folding />
         </state>
       </provider>
