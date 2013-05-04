@@ -1,14 +1,7 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>First:</b>
-  <%= @user.first %>
-</p>
+<h1><%= @user.first %> <%= @user.last %></h1>
 
-<p>
-  <b>Last:</b>
-  <%= @user.last %>
-</p>
 
 <p>
   <b>Email:</b>
@@ -16,5 +9,44 @@
 </p>
 
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
+<% if @user.email == current_user.email %>
+    <h2>Your Posts</h2>
+<% else %>
+    <h2><%= @user.first %>'s Posts</h2>
+<% end %>
+
+<%= link_to 'New Post', new_post_path %>
+
+<br />
+<br />
+
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Image</th>
+    <th>Time</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% (Post.find_all_by_user_id(@user.send(:id))).each do |post| %>
+      <tr>
+        <td><%= post.title %></td>
+        <td><%= post.description %></td>
+        <td><img src="<%= post.image %>" alt="<%= post.title %>"></td>
+        <td><%= post.time %></td>
+        <td><%= link_to 'Expand', post %></td>
+        <td><%= link_to 'Edit', edit_post_path(post) %></td>
+        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
+      </tr>
+
+<% end %>
+
+</table>
+
+
 <%= link_to 'Back', :back %>
