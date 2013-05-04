@@ -67,5 +67,7 @@ module Footyfeed
 
     config.action_mailer.default_url_options = { :host => 'http://footyfeed.herokuapp.com/' }
 
+    config.assets.initialize_on_precompile = false
+
   end
 end
