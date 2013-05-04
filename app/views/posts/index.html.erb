@@ -18,7 +18,7 @@
     <td><%= post.description %></td>
     <td><img src="<%= post.image %>" alt="<%= post.title %>"></td>
     <td><%= post.time %></td>
-    <td><%= post.user %></td>
+    <td><%= post.user_name %></td>
     <td><%= link_to 'Show', post %></td>
     <td><%= link_to 'Edit', edit_post_path(post) %></td>
     <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
