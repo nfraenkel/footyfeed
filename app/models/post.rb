@@ -1,3 +1,8 @@
 class Post < ActiveRecord::Base
-  attr_accessible :image, :time, :title
+  belongs_to :user
+  attr_accessible :description, :image, :time, :title, :user_id
+
+  def user_name
+    user.first + user.last if user
+  end
 end
