@@ -28,11 +28,12 @@
     <%= f.datetime_select :time %>
   </div>
 
+    <!--
   <div class="field">
-    <%= f.label :user_id %><br />
-    <%= f.collection_select :user_id, User.all(:conditions => ["email == ?", current_user.email]), :id, :email %>
+    %= f.label :user_id %><br />
+    %= f.collection_select :user_id, User.all(:conditions => ["email == ?", current_user.email]), :id, :email %>
 
-  </div>
+  </div> -->
 
   <div class="actions">
     <%= f.submit %>
