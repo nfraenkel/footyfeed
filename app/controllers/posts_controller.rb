@@ -14,6 +14,7 @@ class PostsController < ApplicationController
   # GET /posts/1.json
   def show
     @post = Post.find(params[:id])
+    @guy = User.find_by_email(@post.user_email)
 
     respond_to do |format|
       format.html # show.html.erb
