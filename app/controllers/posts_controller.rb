@@ -26,6 +26,7 @@ class PostsController < ApplicationController
   # GET /posts/new.json
   def new
     @post = Post.new
+    @current = User.find_by_email(current_user.email)
 
     respond_to do |format|
       format.html # new.html.erb
