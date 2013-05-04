@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="62888dd6-4539-48f6-acd7-364c52b95673" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/posts/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/posts/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="footyfeed.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -68,7 +67,7 @@
       <file leaf-file-name="_form.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/posts/_form.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="24" selection-start="652" selection-end="652" vertical-scroll-proportion="0.49867022">
+            <state line="33" column="46" selection-start="832" selection-end="832" vertical-scroll-proportion="0.65824467">
               <folding />
             </state>
           </provider>
@@ -928,7 +927,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/posts/_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="24" selection-start="652" selection-end="652" vertical-scroll-proportion="0.49867022">
+        <state line="33" column="46" selection-start="832" selection-end="832" vertical-scroll-proportion="0.65824467">
           <folding />
         </state>
       </provider>
