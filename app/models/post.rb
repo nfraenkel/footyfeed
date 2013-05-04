@@ -3,6 +3,6 @@ class Post < ActiveRecord::Base
   attr_accessible :description, :image, :time, :title, :user_id
 
   def user_name
-    user.email if user
+    user.first if user
   end
 end

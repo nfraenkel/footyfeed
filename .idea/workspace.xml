@@ -3,14 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="62888dd6-4539-48f6-acd7-364c52b95673" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/post.rb" afterPath="$PROJECT_DIR$/app/models/post.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="footyfeed.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="62888dd6-4539-48f6-acd7-364c52b95673" time="1367688617097" ignored="false" />
     <file path="/Gemfile" changelist="62888dd6-4539-48f6-acd7-364c52b95673" time="1367448379809" ignored="false" />
     <file path="/user.rb" changelist="62888dd6-4539-48f6-acd7-364c52b95673" time="1367446655909" ignored="false" />
-    <file path="/post.rb" changelist="62888dd6-4539-48f6-acd7-364c52b95673" time="1367688732471" ignored="false" />
+    <file path="/post.rb" changelist="62888dd6-4539-48f6-acd7-364c52b95673" time="1367688962051" ignored="false" />
     <file path="/post_spec.rb" changelist="62888dd6-4539-48f6-acd7-364c52b95673" time="1367447108147" ignored="false" />
     <file path="$USER_HOME$/Dropbox/Public/SCHOOL/CIS196/firstapp/spec/features/players_spec.rb" changelist="62888dd6-4539-48f6-acd7-364c52b95673" time="1367447378015" ignored="false" />
     <file path="/post_feature_spec.rb" changelist="62888dd6-4539-48f6-acd7-364c52b95673" time="1367450316387" ignored="false" />
@@ -56,10 +55,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="post.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="post.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/models/post.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="28" selection-start="115" selection-end="115" vertical-scroll-proportion="0.0">
+            <state line="5" column="14" selection-start="146" selection-end="146" vertical-scroll-proportion="0.14705883">
               <folding />
             </state>
           </provider>
@@ -92,10 +91,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html.erb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/posts/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="32" selection-start="388" selection-end="388" vertical-scroll-proportion="0.49382716">
+            <state line="23" column="43" selection-start="565" selection-end="565" vertical-scroll-proportion="-12.5">
               <folding />
             </state>
           </provider>
@@ -931,13 +930,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/post.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="28" selection-start="115" selection-end="115" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/posts/new.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="31" selection-start="75" selection-end="75" vertical-scroll-proportion="-3.125">
@@ -961,7 +953,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/posts/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="32" selection-start="388" selection-end="388" vertical-scroll-proportion="0.49382716">
+        <state line="23" column="43" selection-start="565" selection-end="565" vertical-scroll-proportion="-12.5">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/post.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="14" selection-start="146" selection-end="146" vertical-scroll-proportion="0.14705883">
           <folding />
         </state>
       </provider>
