@@ -1,9 +1,45 @@
-<h1>The FootyFeed</h1>
+<style type="text/css">
+  h2 {
+      margin-left: 20px;
+      font-size: 2.0em;
+  }
+  .panel {
+      background-color: #f3f3f3;
+  }
+</style>
 
-<%= link_to 'New Post', new_post_path %>
+<div class="container">
+    <div class="row">
+        <div class="large-3 columns">
+          <h2>The Feed</h2>
+        </div>
+        <div class="large-9 columns">
+          <a href="<%= new_post_path %>" class="radius button" style="color: #ffffff; margin-left: 50px">New Post</a>
+        </div>
+      </div>
+  <div class="row">
 
-<br />
-<br />
+    <br />
+
+<% @posts.each do |post| %>
+        <br/>
+    <div class="panel">
+
+        <td><%= post.title %></td>
+        <td><%= post.description %></td>
+        <td><img src="<%= post.image %>" alt="<%= post.title %>"></td>
+        <td><%= post.time %></td>
+        <td><%= link_to post.user_name, post.user%></td>
+        <td><%= link_to 'Expand', post %></td>
+        <% if post.user_email == current_user.email %>
+            <td><%= link_to 'Edit', edit_post_path(post) %></td>
+            <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% else %>
+            <td><%= 'Edit' %></td>
+            <td><%= 'Destroy' %></td>
+        <% end %>
+    </div>
+<% end %>
 
 <table>
   <tr>
@@ -35,4 +71,9 @@
   </tr>
 <% end %>
 </table>
+
+
+    </div>
+</div>
+
 
