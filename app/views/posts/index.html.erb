@@ -6,74 +6,70 @@
   .panel2 {
       background-color: #f3f3f3;
   }
+  img {
+      margin: 15px;
+      border-color: #ffffff;
+      border: solid;
+      border-width: 1px;
+  }
+
 </style>
 
 <div class="container">
     <div class="row">
-        <div class="large-3 columns">
-          <h2>The Feed</h2>
-        </div>
-        <div class="large-9 columns">
-          <a href="<%= new_post_path %>" class="radius button" style="color: #ffffff; margin-left: 50px">New Post</a>
-        </div>
+        <h2 style="text-align: center">The Feed</h2>
+    </div>
+    <div class="row">
+      <div class="large-3 columns">
+          <p> </p>
       </div>
-  <div class="row">
+      <div class="large-6 columns">
+        <a href="<%= new_post_path %>" class="radius button expand" style="color: #ffffff;">New Post</a>
+      </div>
+      <div class="large-3 columns"></div>
 
-    <br />
+    </div>
+
+
+  <div class="row">
 
 <% @posts.each do |post| %>
         <br/>
     <div class="panel2">
 
-        <td><%= post.title %></td>
-        <td><%= post.description %></td>
-        <td><img src="<%= post.image %>" alt="<%= post.title %>"></td>
-        <td><%= post.time %></td>
-        <td><%= link_to post.user_name, post.user%></td>
-        <td><%= link_to 'Expand', post %></td>
-        <% if post.user_email == current_user.email %>
-            <td><%= link_to 'Edit', edit_post_path(post) %></td>
-            <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <% else %>
-            <td><%= 'Edit' %></td>
-            <td><%= 'Destroy' %></td>
-        <% end %>
-    </div>
+      <div class="row">
+        <h3 style="margin-left: 40px; font-size: 1.75em"><%= post.title %></h3>
+      </div>
+      <div class="row">
+        <div class="large-9 columns">
+            <img src="<%= post.image %>" alt="<%= post.title %>">
+        </div>
+        <div class="large-3 columns">
+          <h5><span style="font-weight: bold">Posted by:</span> <%= link_to post.user_name, post.user%></h5>
+          <br/>
+          <p><span style="font-weight: bold">Posted at:</span> <%= post.time %> </p>
+          <br />
+          <%= link_to 'Expand', post %>
+          <br />
+          <br />
+          <% if post.user_email == current_user.email %>
+              <%= link_to 'Edit', edit_post_path(post) %>
+              <br/>
+              <br />
+              <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
+          <% end %>
+        </div>
+      </div>
+      <div class="row">
+        <p style="margin-left: 40px"><%= post.description %></p>
+      </div>
+
+
+    </div>      <!-- end panel2 -->
 <% end %>
 
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Description</th>
-    <th>Image</th>
-    <th>Time</th>
-    <th>Posted by</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
 
-<% @posts.each do |post| %>
-  <tr>
-    <td><%= post.title %></td>
-    <td><%= post.description %></td>
-    <td><img src="<%= post.image %>" alt="<%= post.title %>"></td>
-    <td><%= post.time %></td>
-    <td><%= link_to post.user_name, post.user%></td>
-    <td><%= link_to 'Expand', post %></td>
-    <% if post.user_email == current_user.email %>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-    <% else %>
-        <td><%= 'Edit' %></td>
-        <td><%= 'Destroy' %></td>
-    <% end %>
-  </tr>
-<% end %>
-</table>
-
-
-    </div>
-</div>
+    </div>      <!-- end row -->
+</div>          <!-- end container -->
 
 
