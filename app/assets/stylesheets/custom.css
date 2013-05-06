@@ -1,0 +1,74 @@
+h1 {
+    font-size: 3.5em;
+    text-align: center;
+}
+li {
+    font-size: 13px;
+}
+body {
+    background-color: #ffffff;
+}
+
+.row {
+    max-width: 80.0em;
+}
+
+#tippytop {
+    border-bottom:1px solid #000000;
+    font-size: 2.0em;
+    background:#f0f0f0;
+    height: 100px;
+    padding:10px 20px;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:2000;
+    width:100%;
+}
+
+#content {
+    margin-top: 125px;
+}
+
+/* panel2s */
+.panel2 {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #d9d9d9;
+    margin-bottom: 1.25em;
+    padding: 1.25em;
+    background: #f2f2f2; }
+.panel2 h1, .panel2 h2, .panel2 h3, .panel2 h4, .panel2 h5, .panel2 h6, .panel2 p {
+    color: #333333; }
+.panel2 > :first-child {
+    margin-top: 0; }
+.panel2 > :last-child {
+    margin-bottom: 0; }
+.panel2 h1, .panel2 h2, .panel2 h3, .panel2 h4, .panel2 h5, .panel2 h6 {
+    line-height: 1;
+    margin-bottom: 0.625em; }
+.panel2 h1.subheader, .panel2 h2.subheader, .panel2 h3.subheader, .panel2 h4.subheader, .panel2 h5.subheader, .panel2 h6.subheader {
+    line-height: 1.4; }
+.panel2.callout {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #2284a1;
+    margin-bottom: 1.25em;
+    padding: 1.25em;
+    background: #2ba6cb;
+    -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset; }
+.panel2.callout h1, .panel2.callout h2, .panel2.callout h3, .panel2.callout h4, .panel2.callout h5, .panel2.callout h6, .panel2.callout p {
+    color: white; }
+.panel2.callout > :first-child {
+    margin-top: 0; }
+.panel2.callout > :last-child {
+    margin-bottom: 0; }
+.panel2.callout h1, .panel2.callout h2, .panel2.callout h3, .panel2.callout h4, .panel2.callout h5, .panel2.callout h6 {
+    line-height: 1;
+    margin-bottom: 0.625em; }
+.panel2.callout h1.subheader, .panel2.callout h2.subheader, .panel2.callout h3.subheader, .panel2.callout h4.subheader, .panel2.callout h5.subheader, .panel2.callout h6.subheader {
+    line-height: 1.4; }
+.panel2.radius {
+    -webkit-border-radius: 3px;
+    border-radius: 3px; }

@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+  <link href="stylesheets/custom.css" rel="stylesheet" type="text/css">
+  <link href="stylesheets/foundation.css" rel="stylesheet" type="text/css">
+  <link href="stylesheets/normalize.css" rel="stylesheet" type="text/css">
+
   <title>Footyfeed</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
@@ -11,31 +16,19 @@
 <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>
 
-<style type="text/css">
-  h1 {
-      font-size: 3.5em;
-      text-align: center;
-  }
-  li {
-      font-size: 13px;
-  }
-  body {
-      background-color: #ffffff;
-  }
-  .panel {
-    margin-top: -16px;
-    border-style: solid;
-    border-color: #FFFFFF;
-    background-color: #cccccc;
-  }
-  .row {
-      max-width: 80.0em;
-  }
-
+<style>
+    #toptitle {
+        text-align: center;
+        font-size: 2.0em;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        font-family:"Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+        font-weight: bold;
+    }
 </style>
 
-<div class="panel">
-    <h1>FootyFeed</h1>
+<div id="tippytop">
+    <p id ="toptitle">FootyFeed</p>
 
     <% if user_signed_in? %>
         <li>
@@ -47,8 +40,12 @@
     <% end %>
 </div>
 
+<div id="content">
+
 
 <%= yield %>
+
+</div>
 
 <footer>
     <hr />
@@ -58,6 +55,38 @@
       </div>
   </div>
 </footer>
+
+
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script>
+    $(document).ready(function() {
+        (function() {
+            //settings
+            var fadeSpeed = 200, fadeTo = 0.3, topDistance = 15;
+            var topbarME = function() { $('#tippytop').fadeTo(fadeSpeed,1); }, topbarML = function() { $('#tippytop').fadeTo(fadeSpeed,fadeTo); };
+            var inside = false;
+            //do
+            $(window).scroll(function() {
+                position = $(window).scrollTop();
+                if(position > topDistance && !inside) {
+                    //add events
+                    topbarML();
+                    $('#tippytop').bind('mouseenter',topbarME);
+                    $('#tippytop').bind('mouseleave',topbarML);
+                    inside = true;
+                }
+                else if (position < topDistance){
+                    topbarME();
+                    $('#tippytop').unbind('mouseenter',topbarME);
+                    $('#tippytop').unbind('mouseleave',topbarML);
+                    inside = false;
+                }
+            });
+        })();
+    });
+</script>
+
+
 
 </body>
 </html>
