@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="62888dd6-4539-48f6-acd7-364c52b95673" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/show.html.erb" afterPath="$PROJECT_DIR$/app/views/users/show.html.erb" />
-    </list>
+    <list default="true" id="62888dd6-4539-48f6-acd7-364c52b95673" name="Default" comment="" />
     <ignored path="footyfeed.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="62888dd6-4539-48f6-acd7-364c52b95673" time="1367959430324" ignored="false" />
@@ -233,7 +231,7 @@
       <file leaf-file-name="show.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/users/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="82" column="61" selection-start="2131" selection-end="2131" vertical-scroll-proportion="0.14677104">
+            <state line="82" column="49" selection-start="2119" selection-end="2119" vertical-scroll-proportion="0.41095892">
               <folding />
             </state>
           </provider>
@@ -251,7 +249,7 @@
       <file leaf-file-name="edit.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/devise/registrations/edit.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="83" column="33" selection-start="2877" selection-end="2877" vertical-scroll-proportion="-11.375">
+            <state line="83" column="33" selection-start="2877" selection-end="2877" vertical-scroll-proportion="-20.75">
               <folding>
                 <element signature="n#style#0;n#a#0;n#div#0;n#div#7;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#9;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -1332,7 +1330,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/devise/registrations/edit.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="83" column="33" selection-start="2877" selection-end="2877" vertical-scroll-proportion="-11.375">
+        <state line="83" column="33" selection-start="2877" selection-end="2877" vertical-scroll-proportion="-20.75">
           <folding>
             <element signature="n#style#0;n#a#0;n#div#0;n#div#7;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#9;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -1343,7 +1341,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/users/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="82" column="61" selection-start="2131" selection-end="2131" vertical-scroll-proportion="0.14677104">
+        <state line="82" column="49" selection-start="2119" selection-end="2119" vertical-scroll-proportion="0.41095892">
           <folding />
         </state>
       </provider>
