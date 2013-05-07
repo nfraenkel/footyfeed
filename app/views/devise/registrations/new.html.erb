@@ -27,6 +27,20 @@
                   <div><%= f.label :password_confirmation %>
                   <%= f.password_field :password_confirmation %></div>
 
+                  <div><%= f.label 'Profile Image Link' %>
+                    <%= f.text_field :profimage %></div>
+                  <div class="row">
+                       <div class="large-4 column">
+                         <div class="row"><p> </p></div>
+                         <div class="row"><p> </p></div>
+                         <a class="button small" style="text-align: right" onclick="previewPic()">Preview image</a>
+                       </div>
+                        <div class="large-8 column">
+                          <img src="http://www.penleehouse.org.uk/assets/uploads/collections/large_890755a.jpg" id="gifimg" >
+                        </div>
+
+
+                    </div>
                   <br />
                   <div style="text-align: center;"><%= f.submit "Sign up" %></div>
                 <% end %>
@@ -39,3 +53,15 @@
         </div>
     </div>
 </div>
+
+
+
+
+<script type="text/javascript">
+    function previewPic()
+    {
+        var img;
+        img = document.getElementById("user_profimage").value;
+        document.getElementById('gifimg').src=img;
+    }
+</script>
