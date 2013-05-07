@@ -9,4 +9,7 @@ class User < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation, :remember_me
   attr_accessible :email, :first, :last, :profimage
 
+  validates :first, :last, presence: { :message => "is a required field!"}
+  validates_format_of :profimage, :with => %r{\.(gif|jpg|png|jpeg)$}i, :message => 'must be a gif, jpg, png or jpeg!'
+
 end

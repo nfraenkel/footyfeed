@@ -65,7 +65,7 @@ module Footyfeed
       g.helper_specs false
     end
 
-    config.action_mailer.default_url_options = { :host => 'http://footyfeed.herokuapp.com/' }
+    config.action_mailer.default_url_options = { :host => 'http://ancient-river-3067.herokuapp.com/' }
 
     config.assets.initialize_on_precompile = false
 
