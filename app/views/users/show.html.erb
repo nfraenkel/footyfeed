@@ -65,7 +65,21 @@
 
     </div>
 
+  <% if Post.find_all_by_user_id(@user.send(:id)).size < 1 %>
+    <div class="panel2" style="height: 125px">
+        <div class="row">
+          <% if @user.email == current_user.email %>
+              <br />
+              <h4 style="margin-left: 10px">You have no posts yet!</h4>
+              <h4 style="margin-left: 10px">Click 'New Post' above when you have a good GIF.</h4>
+          <% else %>
+              <br/>
+              <h4 style="margin-left: 10px"><%= @user.first %> has made no posts yet.</h4>
+          <% end %>
+        </div>
 
+    </div>
+  <% else %>
   <% (Post.find_all_by_user_id(@user.send(:id))).reverse.each do |post| %>
 
   <br/>
@@ -101,6 +115,8 @@
     </div>      <!-- end panel2 -->
     <% end %>
 
+
+   <% end %>
 
     <%= link_to 'Back', :back %>
 
