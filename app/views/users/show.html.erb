@@ -1,54 +1,107 @@
 <p id="notice"><%= notice %></p>
 
-<h1><%= @user.first %> <%= @user.last %></h1>
+<style type="text/css">
+  #profbox {
+      background-color: #fafafa;
+      border:1px solid #BFBFBF;
+      box-shadow:2px 2px 3px #aaaaaa;
+      /*height: 150px;*/
+  }
+  #profpic {
+      width: 160px;
+      height: 160px;
+      border:1px solid #ffffff;
+
+  }
+</style>
+
+<div class="container">
+  <div class="row">
+
+    <div class="large-1 columns">
+      <p> </p>
+    </div>
+    <div class="large-10 columns">
+      <div class="panel" id="profbox">
+        <div class="row">
+          <div class="large-4 columns">
+            <img id="profpic" src="http://media-cache-ec4.pinimg.com/avatars/thechicbrulee-1352470503_600.jpg" alt="<%= @user.first %> <%= @user.last %>">
+
+          </div>
+          <div class="large-8 columns">
+            <h1 style="text-align: left"><%= @user.first %> <%= @user.last %></h1>
+
+            <b>Email:</b>
+              <%= @user.email %>
+            </p>
+          </div>
+        </div>
 
 
-<p>
-  <b>Email:</b>
-  <%= @user.email %>
-</p>
+
+      </div>
+
+    </div>
+    <div class="large-1 columns">
+      <p> </p>
+    </div>
+
+    </div>
+  <div class="row">
 
 
-<% if @user.email == current_user.email %>
-    <h2>Your Posts</h2>
-<% else %>
-    <h2><%= @user.first %>'s Posts</h2>
-<% end %>
 
-<%= link_to 'New Post', new_post_path %>
+    <% if @user.email == current_user.email %>
+        <h2>Your Posts</h2>
+    <% else %>
+        <h2><%= @user.first %>'s Posts</h2>
+    <% end %>
 
-<br />
-<br />
+    <%= link_to 'New Post', new_post_path %>
+
+    <br />
+    <br />
+
+  <% (Post.find_all_by_user_id(@user.send(:id))).reverse.each do |post| %>
+
+  <br/>
+    <div class="panel2">
+
+      <div class="row">
+        <h3 style="margin-left: 40px; font-size: 1.75em"><%= post.title %></h3>
+      </div>
+      <div class="row">
+        <div class="large-9 columns">
+          <img src="<%= post.image %>" alt="<%= post.title %>">
+        </div>
+        <div class="large-3 columns">
+          <h5><span style="font-weight: bold">Posted by:</span> <%= link_to post.user_name, post.user%></h5>
+          <br/>
+          <p><span style="font-weight: bold">Posted at:</span> <%= post.time %> </p>
+          <br />
+          <%= link_to 'Expand', post %>
+          <br />
+          <br />
+          <% if post.user_email == current_user.email %>
+              <%= link_to 'Edit', edit_post_path(post) %>
+              <br/>
+              <br />
+              <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
+          <% end %>
+        </div>
+      </div>
+      <div class="row">
+        <p style="margin-left: 40px"><%= post.description %></p>
+      </div>
 
 
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Description</th>
-    <th>Image</th>
-    <th>Time</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% (Post.find_all_by_user_id(@user.send(:id))).reverse.each do |post| %>
-      <tr>
-        <td><%= post.title %></td>
-        <td><%= post.description %></td>
-        <td><img src="<%= post.image %>" alt="<%= post.title %>"></td>
-        <td><%= post.time %></td>
-        <td><%= link_to 'Expand', post %></td>
-        <% if @user.email == current_user.email %>
-            <td><%= link_to 'Edit', edit_post_path(post) %></td>
-            <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <% end %>
-
-      </tr>
-
-<% end %>
-
-</table>
+    </div>      <!-- end panel2 -->
+    <% end %>
 
 
-<%= link_to 'Back', :back %>
+    <%= link_to 'Back', :back %>
+
+  </div>
+
+</div>
+
