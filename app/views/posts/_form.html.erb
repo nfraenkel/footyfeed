@@ -1,43 +1,67 @@
-<%= form_for(@post) do |f| %>
-  <% if @post.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
-
-      <ul>
-      <% @post.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
+<div class="container">
+  <div class="row">
+    <div class="large-2 columns">
+      <p> </p>
     </div>
-  <% end %>
+    <div class="large-8 columns">
+      <div class="panel">
+                <%= form_for(@post) do |f| %>
+                  <% if @post.errors.any? %>
+                    <div id="error_explanation">
+                      <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
 
-  <div class="field">
-    <%= f.label :title %><br />
-    <%= f.text_field :title, :required => true %>
-  </div>
-  <div class="field">
-    <%= f.label :description %><br />
-    <%= f.text_field :description, :required => true  %>
-  </div>
-  <div class="field">
-    <%= f.label :image %><br />
-    <%= f.text_field :image, :required => true  %>
-  </div>
-  <div class="field">
-    <%= f.label :time %><br />
-    <%= f.datetime_select :time %>
-  </div>
+                      <ul>
+                      <% @post.errors.full_messages.each do |msg| %>
+                        <li><%= msg %></li>
+                      <% end %>
+                      </ul>
+                    </div>
+                  <% end %>
 
-  <%= f.hidden_field(:user_id, :value => User.find_by_email(current_user.email).send(:id)) %>
+                  <div class="field">
+                    <%= f.label :title %>
+                    <%= f.text_field :title  %>
+                  </div>
+                  <div class="field">
+                    <%= f.label :description %>
+                    <%= f.text_field :description  %>
+                  </div>
+                  <div class="field">
+                    <%= f.label :image %>
+                    <%= f.text_field :image  %>
+                    <a class="button small" onclick="document.getElementById('gifimg').src='http://cdn2.mocksession.com/wp-content/uploads/2012/09/ZOMG-OSCAR.gif';">Preview image</a>
+                  </div>
+                  <div class="field">
+                    <div class="row">
+                      <div class="large-9 columns">
+                        <label>Image Preview</label>
+                        <img src="http://www.penleehouse.org.uk/assets/uploads/collections/large_890755a.jpg" id="gifimg" >
+                      </div>
+                      <div class="large-3 columns">
+                        <%= f.label :time %>
+                        <%= f.datetime_select :time%>
+                        </div>
+                    </div>
+                  </div>
 
-  <!--
-  <div class="field">
-    %= f.label :user_id %><br />
-    %= f.collection_select :user_id, User.all , :id, :email %>
+                  <%= f.hidden_field(:user_id, :value => User.find_by_email(current_user.email).send(:id)) %>
 
-  </div> -->
+                  <!--
+                  <div class="field">
+                    %= f.label :user_id %><br />
+                    %= f.collection_select :user_id, User.all , :id, :email %>
 
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+                  </div> -->
+
+                  <div class="actions">
+                    <%= f.submit %>
+                  </div>
+                <% end %>
+
+                </div>
+                </div>
+                <div class="large-2 columns">
+                  <p> </p>
+                </div>
+                </div>
+                </div>
