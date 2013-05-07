@@ -80,7 +80,7 @@
 
     </div>
   <% else %>
-  <% (Post.find_all_by_user_id(@user.send(:id))).reverse.each do |post| %>
+  <% (Post.find_all_by_user_id(@user.send(:id))).reverse_each do |post| %>
 
   <br/>
     <div class="panel2">
