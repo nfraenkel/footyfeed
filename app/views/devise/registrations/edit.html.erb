@@ -1,41 +1,59 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<div class="container">
+    <div class="row">
+        <div class="large-2 columns">
+          <p> </p>
+        </div>
+        <div class="large-8 columns">
+            <div class="panel">
 
-<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
-  <%= devise_error_messages! %>
+                <h2>Edit <%= resource_name.to_s.humanize %></h2>
 
-  <div><%= f.label :first %><br />
-   <%= f.text_field :first, :autofocus => true %></div>
+                <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
+                  <%= devise_error_messages! %>
 
-
-    <div><%= f.label :last %><br />
-      <%= f.text_field :last, :autofocus => true %></div>
+                  <div><%= f.label :first %><br />
+                   <%= f.text_field :first, :autofocus => true %></div>
 
 
-    <div><%= f.label :email %><br />
-  <%= f.email_field :email, :autofocus => true %></div>
+                    <div><%= f.label :last %><br />
+                      <%= f.text_field :last, :autofocus => true %></div>
 
-  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-  <% end %>
 
-  <div><%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-  <%= f.password_field :password, :autocomplete => "off" %></div>
+                    <div><%= f.label :email %><br />
+                  <%= f.email_field :email, :autofocus => true %></div>
 
-  <div><%= f.label :password_confirmation %><br />
-  <%= f.password_field :password_confirmation %></div>
+                  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+                    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+                  <% end %>
 
-  <div><%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-  <%= f.password_field :current_password %></div>
+                  <div><%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
+                  <%= f.password_field :password, :autocomplete => "off" %></div>
 
-  <div><%= f.submit "Update" %></div>
-<% end %>
+                  <div><%= f.label :password_confirmation %><br />
+                  <%= f.password_field :password_confirmation %></div>
 
-<h3>Cancel my account</h3>
+                  <div><%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
+                  <%= f.password_field :current_password %></div>
 
-<p>Unhappy?<%= button_to "Cancel my account", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete %></p>
+                  <div style="text-align: center"><%= f.submit "Update" %></div>
+                <% end %>
 
-<%= link_to "Back", :back %>
+                <br />
 
-<br /> <br />
+                <h3>Cancel my account</h3>
 
-<%= link_to "Home", posts_path %>
+                <span style="text-align: center"><p>Unhappy?<%= button_to "Cancel my account", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete %></p></span>
+
+                <%= link_to "Back", :back %>
+
+                <br /> <br />
+
+                <%= link_to "Home", posts_path %>
+
+            </div>
+        </div>
+        <div class="large-2 columns">
+            <p> </p>
+        </div>
+    </div>
+</div>
