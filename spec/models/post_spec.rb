@@ -6,6 +6,8 @@ describe Post do
     post.should_not be_valid
     post.title = "lolz"
     post.description = 'not real'
+    post.image = "lolz"
+    post.should_not be_valid
     post.image = "lolz.gif"
     post.should be_valid
   end
